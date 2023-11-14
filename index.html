@@ -21,7 +21,8 @@
         <a href="https://www.caju.com.br/" target="_blank">
           <img class="header__caju" src="https://image.fala.caju.com.br/lib/fe3211737164047b701270/m/1/09bbc934-02a1-498c-b62e-04ca06a7ca59.png">
         </a>
-        <img class="header__title" src="https://image.fala.caju.com.br/lib/fe3211737164047b701270/m/1/3d6de109-0ea2-4e5d-80e6-6bea2505afa4.png">
+        <div class="header__col--texts">
+          <img class="header__title" src="https://image.fala.caju.com.br/lib/fe3211737164047b701270/m/1/3d6de109-0ea2-4e5d-80e6-6bea2505afa4.png">
           <h1 class="header__h1">
             Contrate o combo Cabe tudo num <br>
             Caju em novembro e desfrute dos <br>
@@ -54,6 +55,7 @@
           </a>
 
           <p class="header__disclaimer">*Oferta válida para o período do dia 17/11/2023 a 15/12/2023 no plano anual, com fidelidade de 12 meses. Em caso de rescisão antes do período indicado, poderá incidir multa.</p>
+        </div>
 
       </div>
       <div class="header__img">
@@ -604,7 +606,7 @@ header {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
   gap: 40px;
-  width: calc(100% - 40px);
+  width: calc(100% - 100px);
   max-width: 1280px;
   margin: auto;
   align-items: flex-end;
@@ -618,8 +620,13 @@ header {
   border-radius: 30px;
   padding: 40px;
   margin: 72px 0;
-  gap: 40px;
   z-index: 1;
+}
+
+.header__col--texts {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .header__caju {
@@ -1118,6 +1125,38 @@ footer hr {
 .footer__space--bottom {
   display: flex;
   justify-content: space-between;
+}
+
+@media only screen and (max-height: 794px) {
+  .header__container {
+    gap: 32px;
+    min-height: 100vh;
+  }
+ 
+  header {
+    min-height: 100vh;
+  }
+
+  .header__col {
+    margin: auto 0;
+  }
+
+  .header__col--texts {
+    gap: 30px;
+  }
+
+  .header__img--img {
+    height: 94%;
+  }
+
+  .header__graf--1 {
+    height: 200px;
+  }
+  
+  .header__graf--2 {
+    height: 400px;
+  }
+
 }
 
 @media only screen and (max-width: 1000px) {
